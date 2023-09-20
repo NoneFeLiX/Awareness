@@ -1,0 +1,74 @@
+from tkinter import *
+from tkinter import ttk
+import tkinter as tk
+from tkinter.messagebox import showinfo
+import tkinter.messagebox
+
+root = Tk()
+root.title("Program")
+root.geometry("350x260")
+root.resizable(False, False)
+
+def btn_click():
+    info_str = 'Ну ты и лох, хахах'
+    tkinter.messagebox.showinfo(title='Ты не нажал, дебил', message=info_str)
+
+def btn1_click():
+    info_str = ('Ну и нах ты это сделал? Слушай чел\n'
+                'ну как тебе сказать, ты манипулирован!\n'
+                'аккуратней, ок?')
+    tkinter.messagebox.showinfo(title='Вот это настоящая манипуляция', message=info_str)
+
+def btn_yes():
+    info_yes = ('Ты дебил? Нахуй ты политику задеваешь!\n'
+                'Встал быстро и пошёл помогать маме, сука!')
+    tkinter.messagebox.showinfo(title='Ой, дебииил', message=info_yes)
+def btn_no():
+    info_no = 'Встал, тварь блять и пошёл помогать маме, придурок!'
+    tkinter.messagebox.showinfo(title='Дебил номер 2', message=info_no)
+
+def life():
+    info_life = ('Прочитай этот текст пожалуйста:\n\n'
+                 'Это приожение создано для того, чтобы вы осознали\n'
+                 'что вы тратите своё время не на то, чего хотите сами.\n'
+                 'Вот ты точно себе говорил: Вот завтра я позанимаюсь\n'
+                 'своим любимым делом. Но ты этого не сделал.\n'
+                 'Поэтому пошёл нахуй от компьютера и телефона\n'
+                 'и займись своим любимым делом, осуществи свою мечту!\n\n'
+                 'Если ты не смог прочитать этот текст, значит ты очень\n'
+                 'часто сидишь в tiktok, YouTube Shorts и в играх!\n\n'
+                 'Ты время тратишь не на то!!! ОЧНИСЬ!!!')
+    tkinter.messagebox.showinfo(title='О приложении', message=info_life)
+
+welcome = Label(text="Welcome to сюда, блять!", bg="purple")
+welcome.pack()
+
+canvas = Canvas()
+canvas.pack()
+
+frame = Frame(bg='cyan')
+frame.place(relx=0.15, rely=0.15, relwidth=0.7, relheight=0.9)
+
+btn = Button(frame, text='Нажми', bg='blue', command=btn_click)
+btn.pack()
+btn1 = Button(frame, text='А на эту нажмёшь?', bg='pink', command=btn1_click)
+btn1.pack()
+
+text = Label(frame, text="За Россию?", bg="cyan")
+text.pack()
+
+btn_rus = Button(frame, text="ДА", command=btn_yes)
+btn_rus.pack()
+btn_rus1 = Button(frame, text="Нет", command=btn_no)
+btn_rus1.pack()
+
+qwe = Label(frame,
+            text="Если ты нажал на все кнопки, то я тебя\n"
+                 "поздравляю. Ты успешно просрал время,\n"
+                 "придурок Если быть точным, то\n"
+                 "1 минуту своей жизни!", bg='cyan')
+qwe.pack()
+
+butt = Button(frame, text="О приложении", bg="gray", command=life)
+butt.pack()
+root.mainloop()
